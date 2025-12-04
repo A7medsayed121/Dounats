@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+}
+
+nav {
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+}
+
+nav ul li a:hover {
+    color: #0ff;
+    text-shadow: 0 0 10px #0ff, 0 0 25px #0ff;
+}
+
+#backgroundimg {
+    display: inline-block;
+    margin-left: calc(65%/2);
+    height: 300px;
+    width: 40%;
+    text-align: center;
+    background-size: cover;
+    transition: transform 5.5s ease; /* Smooth transition for comfortable spin */
+}
+
+#backgroundimg:hover {
+    transform: rotate(20deg); /* Full spin; change to 180deg for half-spin if preferred */
+    cursor: pointer; /* Indicates interactivity */
+}
+
+#intro {
+    font-family: fantasy;
+    text-shadow: 0 0 10px #0ff, 0 0 25px #0ff;
+    text-align: center;
+    margin-top: 100px;
+}
+
+#introdaction {
+    font-size: 20px;
+    font-family: sans-serif;
+    margin: 40px;
+    line-height: 1.2;
+    word-spacing: 1px;
+}
+
+#introdaction span {
+    color: red;
+    text-shadow: 0 0 10px rgb(93, 128, 128), 0 0 25px #0ff;
+}
+
+.countainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+    gap: 50px;
+}
+
+.countainer .card {
+    width: 300px;
+    height: 100%;
+}
+
+.card p {
+    color: rgb(88, 87, 87);
+}
+
+.card img {
+    width: 200px;
+}
+
+.card img:hover {
+    transform: scale(1.2);
+    transition: transform 1.5s ease;
+}
+
+h2, p {
+    margin-left: 50px;
+}
+
+.footer {
+    background-color: #000;
+    /* أسود */
+    color: #fff;
+    padding: 60px 20px 20px;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 100px;
+    border-top: 2px solid #00ffae;
+    /* خط نيون */
+}
+
+.footer-section-contact {
+    text-align: center;
+}
+
+/* أيقونات السوشيال */
+.socials a {
+    color: #00ffae;
+    margin-right: 15px;
+    font-size: 20px;
+    transition: transform 0.3s ease, color 0.3s ease;
+    text-align: center;
+}
+
+.socials a:hover {
+    color: #fff;
+    transform: scale(1.2);
+}
+
+/* الفوتر السفلي */
+.footer-bottom {
+    text-align: center;
+    padding-top: 25px;
+    font-size: 14px;
+    color: #aaa;
+    text-decoration: none;
+}
+
+.footer-bottom span {
+    color: #00ffae;
+}
+/* ميديا */
+/* Desktop + Tablet + Mobile = 3 عناصر جنب بعض */
+.countainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+.countainer .card {
+    width: 30%; /* تضمن ظهور 3 عناصر في الصف */
+    min-width: 250px; /* لو الشاشة صغيرة يقل الحجم بدون كسر */
+}
+
+/* Mobile (max 768px) */
+@media (max-width: 768px) {
+    .countainer .card {
+        width: 30%; /* مازال 3 جنب بعض */
+    }
+
+    nav ul {
+        gap: 10px;
+        font-size: 15px;
+    }
+}
+
+/* Tablet 769px to 1024px */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .countainer .card {
+        width: 30%; /* ثابت */
+    }
+}
+
+/* Desktop +1025px */
+@media (min-width: 1025px) {
+    .countainer .card {
+        width: 30%; /* ثابت */
+    }
+}
